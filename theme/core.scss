@@ -1,0 +1,145 @@
+/* The following adapts the seattle.css theme to work with HIPC colors. The main colors are overridden; 'supporting' colors and grayscales have been left as they were, but could also be overridden if necessary. */
+/*
+    Immune Blue: #0F91F2
+    Pale Blue: #7AC2EA
+    Bright Orange: #FF5B00
+    White: #FFFFFF
+    Light Grey: #B4BBBF
+    Dark Grey: #1A1A1A
+
+    Replacement of fonts with Nunito Sans is incomplete, but some main ones are here.
+*/
+
+
+/* Font */
+
+.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{
+    font-family:Nunito Sans,Titillium Web,Arial,Helvetica,sans-serif
+} /* font-weight:500;line-height:1.1;color:inherit} */
+.labkey-page-nav .nav>li>a{
+    font-family:Nunito Sans,Titillium Web,Arial,Helvetica,sans-serif;
+}
+
+.btn,.btn-default{font-family:Nunito Sans, Roboto,Arial,Helvetica,sans-serif}
+body{font-family:Nunito Sans, Roboto,Arial,Helvetica,sans-serif;font-size:14px;line-height:1.42857;color:#000;background-color:#f8f8f8}
+
+/* Font, plus color change - orange was #e54f19 or blue was #116596 */
+.btn-primary{border:1px solid #ff5b00;color:#ff5b00;font-size:12px;font-family:Nunito Sans, Roboto,Arial,Helvetica,sans-serif;font-weight:700}
+.labkey-wp-text-buttons a,.labkey-wp-text-buttons a:visited{padding:3px 5px;margin-left:5px;margin-bottom:2px;border:1px solid #fff;color:#0f91f2;font-family:Nunito Sans,Roboto,Arial,Helvetica,sans-serif}
+
+/* Color Replacements */
+
+/* Top background -  was white #fff i */
+.labkey-page-header{background-color:#1A1A1A}
+
+/* was #116596 in seattle.css - darker brand blue */
+.labkey-page-nav{background-color:#0F91F2}
+.labkey-page-nav .navbar-header>.nav>li{background-color:#0F91F2}
+a{color:#0F91F2}
+.labkey-page-nav .navbar-header>.nav>li.open>a,.labkey-page-nav .navbar-header>.nav>li:focus>a,.labkey-page-nav .navbar-header>.nav>li:hover>a{color:#1A1A1A; background-color:#7AC2EA}  /* hover over project menu */
+.labkey-page-nav .lk-nav-tabs>li.active>a,.labkey-page-nav .lk-nav-tabs>li.open>a,.labkey-page-nav .lk-nav-tabs>li:focus>a,.labkey-page-nav .lk-nav-tabs>li:hover>a{text-decoration:none;background-color:#f8f8f8;color:#0F91F2}
+.text-primary{color:#0F91F2}
+.bg-primary{color:#fff;background-color:#0F91F2}
+.labkey-page-header .navbar-nav-lk>li>a.fa,.labkey-page-header .navbar-nav-lk>li>a>i.fa{color:#0F91F2}
+.nav .open>a,.nav .open>a:focus,.nav .open>a:hover{background-color:#eee;border-color:#0F91F2}
+.labkey-page-header .navbar-header .brand-link>a{color:#0F91F2}
+.labkey-page-header .navbar-nav-lk>li>a,.labkey-page-header .navbar-nav-lk>li>span{color:#0F91F2}
+.panel-portal .panel-title>a:hover{color:#0F91F2}
+a.labkey-text-link,a.labkey-text-link-noarrow,a.labkey-text-link:visited{color:#0F91F2;}
+.labkey-button-bar .labkey-button{color:#0F91F2}
+.btn-link{color:#0F91F2}
+.tool-icon a,.tool-icon a:visited{color:#0F91F2;}
+.nav-tabs>li>a{color:#0F91F2;background-color:transparent}
+.labkey-projects-container .fa-folder-open{color:#0F91F2}
+.dropdown-menu>.active>a,.dropdown-menu>.active>a:focus,.dropdown-menu>.active>a:hover{color:#fff;background-color:#0F91F2}
+.pagination>li>a,.pagination>li>span{color:#0F91F2;background-color:#fff;border:1px solid #ddd}
+.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover{z-index:3;color:#fff;background-color:#0F91F2;border-color:#0F91F2}
+.label-primary{background-color:#0F91F2}
+.list-group-item.active>.badge,.nav-pills>.active>a>.badge{color:#0F91F2;background-color:#fff}
+a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover{border-color:#0F91F2}
+.progress-bar{color:#fff;background-color:#0F91F2;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.15);box-shadow:inset 0 -1px 0 rgba(0,0,0,.15);-webkit-transition:width .6s ease;-o-transition:width .6s ease;transition:width .6s ease}
+.list-group-item.active,.list-group-item.active:focus,.list-group-item.active:hover{z-index:2;color:#fff;background-color:#0F91F2;border-color:#0F91F2}
+.panel-primary{border-color:#0F91F2}
+.panel-primary>.panel-heading{color:#fff;background-color:#0F91F2;border-color:#0F91F2}
+.panel-primary>.panel-heading+.panel-collapse>.panel-body{border-top-color:#0F91F2}
+.panel-primary>.panel-heading .badge{color:#0F91F2;background-color:#fff}
+.panel-primary>.panel-footer+.panel-collapse>.panel-body{border-bottom-color:#0F91F2}
+.modal .modal-header{background-color:#0F91F2;color:#fff}
+.lk-text-theme-dark{color:#0F91F2}
+.lk-border-theme-dark{border-color:#0F91F2}
+.labkey-link{color:#0F91F2}
+.labkey-header{color:#0F91F2}
+th.labkey-header a:hover{color:#0F91F2;font-weight:400;text-transform:uppercase}
+.labkey-data-region .lk-dr-action-icon{color:#0F91F2;}
+tr.labkey-nav-tree-row{color:#0F91F2;}
+.labkey-announcement-title a.announcement-title-link{color:#0F91F2;}
+th.labkey-wp-title-left a:hover{color:#0F91F2;}
+.labkey-wp-text-buttons a:hover{background-color:#fff;color:#0f91f2;width:100%;cursor:pointer}
+.gwt-DialogBox{border:4px solid #0F91F2;}
+.gwt-DialogBox .Caption{background-color:#f8f8f8;border-bottom:1px solid #0F91F2}
+.labkey-tab,.labkey-tab a,td.labkey-tab{background-color:#f4f4f4;color:#0F91F2}
+.edit-views-link:hover{color:#0F91F2}
+span.button-icon{background-color:#0F91F2}
+.labkey-notification-panel .labkey-notification-clear-all,.labkey-notification-panel .labkey-notification-createdby,.labkey-notification-panel .labkey-notification-footer,.labkey-notification-panel .labkey-notification-icon,.labkey-notification-panel .labkey-notification-title,.labkey-notification-panel .labkey-notification-type-label{color:#0F91F2}
+.labkey-notification-panel .labkey-notification,.labkey-notification-panel .labkey-notification-body,.labkey-notification-panel .labkey-notification-none,.labkey-notification-panel .labkey-notification-times,.labkey-notification-panel .labkey-notification-toggle{color:#0F91F2}
+.labkey-page-header .navbar-nav-lk>li>a:focus,.labkey-page-header .navbar-nav-lk>li>a:hover,.labkey-page-header .navbar-nav-lk>li>span:focus,.labkey-page-header .navbar-nav-lk>li>span:hover{color:#0F91F2}
+#project-mobile>.dropdown-menu>.lk-header-close>i{color:#0F91F2}
+#project-mobile>.dropdown-menu>.lk-horizontal-menu>li.open>a{background-color:#fff;color:#0F91F2}
+#project-mobile>.dropdown-menu>.lk-dropdown-menu-area>li>a{background-color:#fff;color:#0F91F2}
+#project-mobile>.dropdown-menu>.lk-dropdown-menu-area>li>a:hover{background-color:#0F91F2;color:#fff}
+.folder-menu-buttons .button-icon{background-color:#0F91F2;opacity:1}
+.folder-menu-buttons .folder-menu-button-icon .fa,.folder-menu-buttons .folder-menu-button-icon a{color:#0F91F2}
+
+/* was #3495d2 in seattle.css - lighter brand blue */
+.dropdown-menu>li>a:focus,.dropdown-menu>li>a:hover{color:#fff;text-decoration:none;background-color:#7AC2EA}
+.dropdown-layer-menu>li>a:hover{text-decoration:none;color:#fff;background-color:#7AC2EA;cursor:pointer}
+.nav-pills>li.active>a,.nav-pills>li.active>a:focus,.nav-pills>li.active>a:hover{color:#fff;background-color:#7AC2EA}
+.labkey-page-nav .navbar-header>.nav>li.dropdown-folder-nav{background-color:#0F91F2} /* project menu background (not hovering) */
+.panel-portal{border-top:3px solid #FF5B00} /* Web part top line  */
+.panel-portal .panel-portal>.panel-heading{color:#fff;background-color:#7AC2EA;border-color:#ddd}
+.panel-portal .panel-portal>.panel-heading .badge{color:#7AC2EA;background-color:#fff}
+.lk-text-theme-light{color:#7AC2EA}
+.lk-border-theme-light{border-color:#7AC2EA}
+div.labkey-completion .labkey-completion-highlight{background-color:#7AC2EA;border:none;color:#fff}
+.gwt-TabBar .gwt-TabBarItem-selected{border-top:2px solid #7AC2EA}
+.labkey-wizard-container{border-top:3px solid #7AC2EA}
+.labkey-wizard-container .labkey-wizard-pills>li.active>a,.labkey-wizard-container .labkey-wizard-pills>li.active>a:focus,.labkey-wizard-container .labkey-wizard-pills>li.active>a:hover{color:#eee;background-color:#7AC2EA}
+.labkey-projects-container .thumb-wrap:hover .fa-folder-open{color:#7AC2EA}
+
+/* tabs - was #73b6e0 (even lighter blue) with white */
+.labkey-page-nav .lk-nav-tabs>li{background-color:#B4BBBF;}
+.labkey-page-nav .lk-nav-tabs>li>a{color:#1A1A1A;}
+
+/* was #126495 and rgba(18,100,149,.7) (study tool icons/hover) */
+.tool-icon img{background:#1A1A1A;background:#B4BBBF}
+.tool-icon .fa{color:#1A1A1A;color:#B4BBBF}
+.tool-icon:hover a,.tool-icon:hover a:visited{color:#000}
+.tool-icon:hover img{background:#1A1A1A}
+.tool-icon:hover .fa{color:#1A1A1A}
+
+/* Orange - was #e54f19 - LK brand is #e86030 - seems to coordinate with HIPC orange, so both are here */
+.btn-primary{background-color:#e86030;border-color:#ff5b00}
+.btn-primary.focus,.btn-primary:focus{color:#ff5b00}
+.btn-primary:hover{color:#ff5b00}
+.btn-primary.active,.btn-primary:active,.open>.btn-primary.dropdown-toggle{color:#ff5b00}
+.btn-primary.active.focus,.btn-primary.active:focus,.btn-primary.active:hover,.btn-primary:active.focus,.btn-primary:active:focus,.btn-primary:active:hover,.open>.btn-primary.dropdown-toggle.focus,.open>.btn-primary.dropdown-toggle:focus,.open>.btn-primary.dropdown-toggle:hover{color:#ff5b00}
+.btn-primary.disabled.focus,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled].focus,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary.focus,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover{background-color:#e86030;border-color:#ff5b00}
+.btn-primary .badge{color:#e86030;background-color:#ff5b00}
+
+.labkey-page-header .navbar-nav-lk>li>.btn-primary,.labkey-page-header .navbar-nav-lk>li>.btn-primary:focus,.labkey-page-header .navbar-nav-lk>li>.btn-primary:hover{color:#ff5b00}
+.lk-region-context-action{background-color:#fff;border:1px solid #e86030;}
+.lk-region-context-action i.fa{color:#e86030}
+
+
+/* Assorted other shades */
+.label-primary[href]:focus,.label-primary[href]:hover{background-color:#0c4668} /*another blue */
+.label-success{background-color:#5cb85c} /*light green*/
+.label-success[href]:focus,.label-success[href]:hover{background-color:#449d44} /*darker green */
+.label-info{background-color:#5bc0de} /* light blue */
+.label-info[href]:focus,.label-info[href]:hover{background-color:#31b0d5} /*bright blue*/
+.label-warning{background-color:#f0ad4e} /* mild orange */
+.label-warning[href]:focus,.label-warning[href]:hover{background-color:#ec971f}
+.label-danger{background-color:#b82025}
+.label-danger[href]:focus,.label-danger[href]:hover{background-color:#8d181c}
+
+
