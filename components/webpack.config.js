@@ -34,12 +34,12 @@ module.exports = {
                     }
                 ]
             },
-            { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
-            { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
-            { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/octet-stream" },
-            { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader" },
-            { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" },
-            { test: /\.png(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=image/png" },
+            // { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+            // { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+            // { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/octet-stream" },
+            // { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader" },
+            // { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" },
+            // { test: /\.png(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=image/png" },
             {
                 test: /\.tsx?$/,
                 loaders: [{
@@ -67,25 +67,26 @@ module.exports = {
         library: '@immunespace/components',
         libraryTarget: 'umd'
     },
-    // plugins: [
-    //     new CopyWebpackPlugin({
-    //         patterns: [
-    //             {
-    //                 // copy static scss files into the dist dir to be used by LabKey module apps
-    //                 from: 'src/internal/app/scss',
-    //                 to: 'assets/scss'
-    //             }
-    //         ]
-    //     }),
-    //     new CopyWebpackPlugin({
-    //         patterns: [
-    //             {
-    //                 // copy theme scss files into the dist dir to be used by LabKey module apps
-    //                 from: 'src/theme',
-    //                 to: 'assets/scss/theme'
-    //             }
-    //         ]
-    //     })
-    // ],
-    externals: ['react', 'react-dom', 'reactn', 'react-bootstrap', 'immutable', 'jquery']
+    plugins: [
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    // copy static scss files into the dist dir to be used by LabKey module apps
+                    from: 'src/index.scss',
+                    to: 'scss'
+                }
+            ]
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    // copy static scss files into the dist dir to be used by LabKey module apps
+                    from: '*/*.scss',
+                    to: 'scss',
+                    context: 'src'
+                }
+            ]
+        })
+    ],
+    externals: ['react', 'react-dom', 'reactn', 'immutable', 'jquery']
 };
