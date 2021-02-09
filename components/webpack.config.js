@@ -21,12 +21,9 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
+                    'style-loader', 
+                    'css-loader',
                     {
-                        loader: 'css-loader',
-                        options: {
-                            importLoaders: 1
-                        }
-                    },{
                         loader: 'sass-loader',
                         options: {
                             sourceMap: true
@@ -55,7 +52,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: [ '.jsx', '.js', '.tsx', '.ts' ]
+        extensions: [ '.jsx', '.js', '.tsx', '.ts', '.scss' ]
     },
     optimization: {
         // don't minimize the code from components, module/app usages will be doing that if they want to

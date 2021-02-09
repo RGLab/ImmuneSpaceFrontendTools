@@ -16,7 +16,7 @@ module.exports = {
             patterns: [
                 {
                     // copy static scss files into the dist dir to be used by LabKey module apps
-                    from: '_variables.scss',
+                    from: '_immunespace.scss',
                     to: ''
                 }
             ]

@@ -1,14 +1,14 @@
-@import "variables";
+@use 'immunespace';
 
 /* The following adapts the seattle.css theme to work with HIPC colors. The main colors are overridden; 
 'supporting' colors and grayscales have been left as they were, but could also be overridden if necessary. */
 /*
-    Immune Blue: $immunespace-primary
-    Pale Blue: $immunespace-secondary
-    Bright Orange: $highlight-secondary
+    Immune Blue: immunespace.$primary
+    Pale Blue: immunespace.$secondary
+    Bright Orange: immunespace.$highlight-secondary
     White: #FFFFFF
-    Light Grey: $immunespace-lightgray
-    Dark Grey: $immunespace-background
+    Light Grey: immunespace.$light-gray
+    Dark Grey: immunespace.$background
 
     Replacement of fonts with Nunito Sans is incomplete, but some main ones are here.
 */
@@ -47,8 +47,8 @@ body {
 
 /* Font, plus color change - orange was #e54f19 or blue was #116596 */
 .btn-primary {
-    border: 1px solid $highlight-secondary;
-    color: $highlight-secondary;
+    border: 1px solid immunespace.$highlight-secondary;
+    color: immunespace.$highlight-secondary;
     font-size: 12px;
     font-family: Nunito Sans, Roboto, Arial, Helvetica, sans-serif;
     font-weight: 700;
@@ -59,7 +59,7 @@ body {
     margin-left: 5px;
     margin-bottom: 2px;
     border: 1px solid #fff;
-    color: $immunespace-primary;
+    color: immunespace.$primary;
     font-family: Nunito Sans, Roboto, Arial, Helvetica, sans-serif;
 }
 
@@ -67,24 +67,24 @@ body {
 
 /* Top background -  was white #fff i */
 .labkey-page-header {
-    background-color: $immunespace-background;
+    background-color: immunespace.$background;
 }
 
 /* was #116596 in seattle.css - darker brand blue */
 .labkey-page-nav {
-    background-color: $immunespace-primary;
+    background-color: immunespace.$primary;
 }
 .labkey-page-nav .navbar-header > .nav > li {
-    background-color: $immunespace-primary;
+    background-color: immunespace.$primary;
 }
 a {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .labkey-page-nav .navbar-header > .nav > li.open > a,
 .labkey-page-nav .navbar-header > .nav > li:focus > a,
 .labkey-page-nav .navbar-header > .nav > li:hover > a {
-    color: $immunespace-background;
-    background-color: $immunespace-secondary;
+    color: immunespace.$background;
+    background-color: immunespace.$secondary;
 } /* hover over project menu */
 .labkey-page-nav .lk-nav-tabs > li.active > a,
 .labkey-page-nav .lk-nav-tabs > li.open > a,
@@ -92,66 +92,66 @@ a {
 .labkey-page-nav .lk-nav-tabs > li:hover > a {
     text-decoration: none;
     background-color: #f8f8f8;
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .text-primary {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .bg-primary {
     color: #fff;
-    background-color: $immunespace-primary;
+    background-color: immunespace.$primary;
 }
 .labkey-page-header .navbar-nav-lk > li > a.fa,
 .labkey-page-header .navbar-nav-lk > li > a > i.fa {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .nav .open > a,
 .nav .open > a:focus,
 .nav .open > a:hover {
     background-color: #eee;
-    border-color: $immunespace-primary;
+    border-color: immunespace.$primary;
 }
 .labkey-page-header .navbar-header .brand-link > a {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .labkey-page-header .navbar-nav-lk > li > a,
 .labkey-page-header .navbar-nav-lk > li > span {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .panel-portal .panel-title > a:hover {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 a.labkey-text-link,
 a.labkey-text-link-noarrow,
 a.labkey-text-link:visited {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .labkey-button-bar .labkey-button {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .btn-link {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .tool-icon a,
 .tool-icon a:visited {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .nav-tabs > li > a {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
     background-color: transparent;
 }
 .labkey-projects-container .fa-folder-open {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:focus,
 .dropdown-menu > .active > a:hover {
     color: #fff;
-    background-color: $immunespace-primary;
+    background-color: immunespace.$primary;
 }
 .pagination > li > a,
 .pagination > li > span {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
     background-color: #fff;
     border: 1px solid #ddd;
 }
@@ -163,25 +163,25 @@ a.labkey-text-link:visited {
 .pagination > .active > span:hover {
     z-index: 3;
     color: #fff;
-    background-color: $immunespace-primary;
-    border-color: $immunespace-primary;
+    background-color: immunespace.$primary;
+    border-color: immunespace.$primary;
 }
 .label-primary {
-    background-color: $immunespace-primary;
+    background-color: immunespace.$primary;
 }
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
     background-color: #fff;
 }
 a.thumbnail.active,
 a.thumbnail:focus,
 a.thumbnail:hover {
-    border-color: $immunespace-primary;
+    border-color: immunespace.$primary;
 }
 .progress-bar {
     color: #fff;
-    background-color: $immunespace-primary;
+    background-color: immunespace.$primary;
     -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
     -webkit-transition: width 0.6s ease;
@@ -193,84 +193,84 @@ a.thumbnail:hover {
 .list-group-item.active:hover {
     z-index: 2;
     color: #fff;
-    background-color: $immunespace-primary;
-    border-color: $immunespace-primary;
+    background-color: immunespace.$primary;
+    border-color: immunespace.$primary;
 }
 .panel-primary {
-    border-color: $immunespace-primary;
+    border-color: immunespace.$primary;
 }
 .panel-primary > .panel-heading {
     color: #fff;
-    background-color: $immunespace-primary;
-    border-color: $immunespace-primary;
+    background-color: immunespace.$primary;
+    border-color: immunespace.$primary;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-    border-top-color: $immunespace-primary;
+    border-top-color: immunespace.$primary;
 }
 .panel-primary > .panel-heading .badge {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
     background-color: #fff;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-    border-bottom-color: $immunespace-primary;
+    border-bottom-color: immunespace.$primary;
 }
 .modal .modal-header {
-    background-color: $immunespace-primary;
+    background-color: immunespace.$primary;
     color: #fff;
 }
 .lk-text-theme-dark {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .lk-border-theme-dark {
-    border-color: $immunespace-primary;
+    border-color: immunespace.$primary;
 }
 .labkey-link {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .labkey-header {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 th.labkey-header a:hover {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
     font-weight: 400;
     text-transform: uppercase;
 }
 .labkey-data-region .lk-dr-action-icon {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 tr.labkey-nav-tree-row {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .labkey-announcement-title a.announcement-title-link {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 th.labkey-wp-title-left a:hover {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .labkey-wp-text-buttons a:hover {
     background-color: #fff;
-    color: $immunespace-primary;
+    color: immunespace.$primary;
     width: 100%;
     cursor: pointer;
 }
 .gwt-DialogBox {
-    border: 4px solid $immunespace-primary;
+    border: 4px solid immunespace.$primary;
 }
 .gwt-DialogBox .Caption {
     background-color: #f8f8f8;
-    border-bottom: 1px solid $immunespace-primary;
+    border-bottom: 1px solid immunespace.$primary;
 }
 .labkey-tab,
 .labkey-tab a,
 td.labkey-tab {
     background-color: #f4f4f4;
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .edit-views-link:hover {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 span.button-icon {
-    background-color: $immunespace-primary;
+    background-color: immunespace.$primary;
 }
 .labkey-notification-panel .labkey-notification-clear-all,
 .labkey-notification-panel .labkey-notification-createdby,
@@ -278,43 +278,43 @@ span.button-icon {
 .labkey-notification-panel .labkey-notification-icon,
 .labkey-notification-panel .labkey-notification-title,
 .labkey-notification-panel .labkey-notification-type-label {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .labkey-notification-panel .labkey-notification,
 .labkey-notification-panel .labkey-notification-body,
 .labkey-notification-panel .labkey-notification-none,
 .labkey-notification-panel .labkey-notification-times,
 .labkey-notification-panel .labkey-notification-toggle {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 .labkey-page-header .navbar-nav-lk > li > a:focus,
 .labkey-page-header .navbar-nav-lk > li > a:hover,
 .labkey-page-header .navbar-nav-lk > li > span:focus,
 .labkey-page-header .navbar-nav-lk > li > span:hover {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 #project-mobile > .dropdown-menu > .lk-header-close > i {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 #project-mobile > .dropdown-menu > .lk-horizontal-menu > li.open > a {
     background-color: #fff;
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 #project-mobile > .dropdown-menu > .lk-dropdown-menu-area > li > a {
     background-color: #fff;
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 #project-mobile > .dropdown-menu > .lk-dropdown-menu-area > li > a:hover {
-    background-color: $immunespace-primary;
+    background-color: immunespace.$primary;
     color: #fff;
 }
 .folder-menu-buttons .button-icon {
-    background-color: $immunespace-primary;
+    background-color: immunespace.$primary;
     opacity: 1;
 }
 .folder-menu-buttons .folder-menu-button-icon .fa,
 .folder-menu-buttons .folder-menu-button-icon a {
-    color: $immunespace-primary;
+    color: immunespace.$primary;
 }
 
 /* was #3495d2 in seattle.css - lighter brand blue */
@@ -322,106 +322,106 @@ span.button-icon {
 .dropdown-menu > li > a:hover {
     color: #fff;
     text-decoration: none;
-    background-color: $immunespace-secondary;
+    background-color: immunespace.$secondary;
 }
 .dropdown-layer-menu > li > a:hover {
     text-decoration: none;
     color: #fff;
-    background-color: $immunespace-secondary;
+    background-color: immunespace.$secondary;
     cursor: pointer;
 }
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:focus,
 .nav-pills > li.active > a:hover {
     color: #fff;
-    background-color: $immunespace-secondary;
+    background-color: immunespace.$secondary;
 }
 .labkey-page-nav .navbar-header > .nav > li.dropdown-folder-nav {
-    background-color: $immunespace-primary;
+    background-color: immunespace.$primary;
 } /* project menu background (not hovering) */
 .panel-portal {
-    border-top: 3px solid $highlight-secondary;
+    border-top: 3px solid immunespace.$highlight-secondary;
 } /* Web part top line  */
 .panel-portal .panel-portal > .panel-heading {
     color: #fff;
-    background-color: $immunespace-secondary;
+    background-color: immunespace.$secondary;
     border-color: #ddd;
 }
 .panel-portal .panel-portal > .panel-heading .badge {
-    color: $immunespace-secondary;
+    color: immunespace.$secondary;
     background-color: #fff;
 }
 .lk-text-theme-light {
-    color: $immunespace-secondary;
+    color: immunespace.$secondary;
 }
 .lk-border-theme-light {
-    border-color: $immunespace-secondary;
+    border-color: immunespace.$secondary;
 }
 div.labkey-completion .labkey-completion-highlight {
-    background-color: $immunespace-secondary;
+    background-color: immunespace.$secondary;
     border: none;
     color: #fff;
 }
 .gwt-TabBar .gwt-TabBarItem-selected {
-    border-top: 2px solid $immunespace-secondary;
+    border-top: 2px solid immunespace.$secondary;
 }
 .labkey-wizard-container {
-    border-top: 3px solid $immunespace-secondary;
+    border-top: 3px solid immunespace.$secondary;
 }
 .labkey-wizard-container .labkey-wizard-pills > li.active > a,
 .labkey-wizard-container .labkey-wizard-pills > li.active > a:focus,
 .labkey-wizard-container .labkey-wizard-pills > li.active > a:hover {
     color: #eee;
-    background-color: $immunespace-secondary;
+    background-color: immunespace.$secondary;
 }
 .labkey-projects-container .thumb-wrap:hover .fa-folder-open {
-    color: $immunespace-secondary;
+    color: immunespace.$secondary;
 }
 
 /* tabs - was #73b6e0 (even lighter blue) with white */
 .labkey-page-nav .lk-nav-tabs > li {
-    background-color: $immunespace-lightgray;
+    background-color: immunespace.$light-gray;
 }
 .labkey-page-nav .lk-nav-tabs > li > a {
-    color: $immunespace-background;
+    color: immunespace.$background;
 }
 
 /* was #126495 and rgba(18,100,149,.7) (study tool icons/hover) */
 .tool-icon img {
-    background: $immunespace-background;
-    background: $immunespace-lightgray;
+    background: immunespace.$background;
+    background: immunespace.$light-gray;
 }
 .tool-icon .fa {
-    color: $immunespace-background;
-    color: $immunespace-lightgray;
+    color: immunespace.$background;
+    color: immunespace.$light-gray;
 }
 .tool-icon:hover a,
 .tool-icon:hover a:visited {
     color: #000;
 }
 .tool-icon:hover img {
-    background: $immunespace-background;
+    background: immunespace.$background;
 }
 .tool-icon:hover .fa {
-    color: $immunespace-background;
+    color: immunespace.$background;
 }
 
 /* Orange - was #e54f19 - LK brand is #e86030 - seems to coordinate with HIPC orange, so both are here */
 .btn-primary {
     background-color: #e86030;
-    border-color: $highlight-secondary;
+    border-color: immunespace.$highlight-secondary;
 }
 .btn-primary.focus,
 .btn-primary:focus {
-    color: $highlight-secondary;
+    color: immunespace.$highlight-secondary;
 }
 .btn-primary:hover {
-    color: $highlight-secondary;
+    color: immunespace.$highlight-secondary;
 }
 .btn-primary.active,
 .btn-primary:active,
 .open > .btn-primary.dropdown-toggle {
-    color: $highlight-secondary;
+    color: immunespace.$highlight-secondary;
 }
 .btn-primary.active.focus,
 .btn-primary.active:focus,
@@ -432,7 +432,7 @@ div.labkey-completion .labkey-completion-highlight {
 .open > .btn-primary.dropdown-toggle.focus,
 .open > .btn-primary.dropdown-toggle:focus,
 .open > .btn-primary.dropdown-toggle:hover {
-    color: $highlight-secondary;
+    color: immunespace.$highlight-secondary;
 }
 .btn-primary.disabled.focus,
 .btn-primary.disabled:focus,
@@ -444,17 +444,17 @@ fieldset[disabled] .btn-primary.focus,
 fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary:hover {
     background-color: #e86030;
-    border-color: $highlight-secondary;
+    border-color: immunespace.$highlight-secondary;
 }
 .btn-primary .badge {
     color: #e86030;
-    background-color: $highlight-secondary;
+    background-color: immunespace.$highlight-secondary;
 }
 
 .labkey-page-header .navbar-nav-lk > li > .btn-primary,
 .labkey-page-header .navbar-nav-lk > li > .btn-primary:focus,
 .labkey-page-header .navbar-nav-lk > li > .btn-primary:hover {
-    color: $highlight-secondary;
+    color: immunespace.$highlight-secondary;
 }
 .lk-region-context-action {
     background-color: #fff;

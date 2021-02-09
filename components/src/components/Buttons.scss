@@ -1,16 +1,16 @@
 
-@import "~@immunespace/theme/dist/variables";
+@use "~@immunespace/theme/dist/variables";
 
 .df-highlighted-button {
     margin: 9px 5px;
-    background-color: $highlight-primary;
+    background-color: variables.$highlight-primary;
     border-radius: 2px;
     color: white;
     padding-top: 0;
     height: 20px;
     
     &:hover {
-      border: 1px solid $highlight-primary;
+      border: 1px solid variables.$highlight-primary;
       color: white;
     }
   }
