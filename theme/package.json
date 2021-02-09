@@ -1,0 +1,30 @@
+{
+  "name": "@immunespace/theme",
+  "version": "0.1.0",
+  "description": "Theme and styles for ImmuneSpace",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "webpack --config webpack.config.js && sass core.scss dist/core.css",
+    "format": "prettier --write \"*.scss\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RGLab/ImmuneSpaceFrontendTools.git"
+  },
+  "author": "ImmuneSpace",
+  "license": "ISC",
+  "homepage": "https://github.com/RGLab/ImmuneSpaceFrontendTools/tree/main/theme",
+  "devDependencies": {
+    "copy-webpack-plugin": "7.0.0",
+    "mini-css-extract-plugin": "1.3.6",
+    "node-sass": "5.0.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.6",
+    "sass-loader": "11.0.1",
+    "sass-webpack-plugin": "^1.0.3",
+    "webpack": "5.21.2",
+    "webpack-cli": "^4.5.0"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "@immunespace/components",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "shared React component library for ImmuneSpace",
   "main": "dist/components.js",
   "module": "dist/components.js",
@@ -34,6 +34,7 @@
     "@types/react": "16.9.44"
   },
   "devDependencies": {
+    "@immunespace/theme": "0.1.0",
     "@labkey/eslint-config-base": "0.0.8",
     "@labkey/eslint-config-react": "0.0.8",
     "@storybook/addon-knobs": "6.1.15",
@@ -56,6 +57,7 @@
     "webpack-cli": "3.3.12"
   },
   "peerDependencies": {
+    "@immunespace/theme": "0.1.0",
     "immutable": "^3.8.2",
     "react": "16.x",
     "react-dom": "16.x"
