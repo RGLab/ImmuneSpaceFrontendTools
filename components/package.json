@@ -1,6 +1,6 @@
 {
   "name": "@immunespace/components",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "shared React component library for ImmuneSpace",
   "main": "dist/components.js",
   "module": "dist/components.js",
@@ -35,7 +35,7 @@
     "sass": "^1.32.6"
   },
   "devDependencies": {
-    "@immunespace/theme": "0.1.0",
+    "@immunespace/theme": "0.1.1",
     "@labkey/eslint-config-base": "0.0.8",
     "@labkey/eslint-config-react": "0.0.8",
     "@storybook/addon-knobs": "6.1.15",
