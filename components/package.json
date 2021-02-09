@@ -1,6 +1,6 @@
 {
   "name": "@immunespace/components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "shared React component library for ImmuneSpace",
   "main": "dist/components.js",
   "module": "dist/components.js",
@@ -9,10 +9,13 @@
     "dist/"
   ],
   "scripts": {
-    "test": "jest --config  jestconfig.json",
+    "test": "jest --config jestconfig.json",
     "build": "rimraf dist && webpack --config webpack.config.js",
     "format": "prettier --write \"src/**/*.ts*\" ",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook",
+    "lint": "eslint --ext '*.ts,*.tsx'",
+    "lint-all": "eslint --ext '*.ts,*.tsx'",
+    "lint-fix": "eslint --fix --ext '*.ts,*.tsx' src/components/*.tsx"
   },
   "repository": {
     "type": "git",
@@ -31,6 +34,8 @@
     "@types/react": "16.9.44"
   },
   "devDependencies": {
+    "@labkey/eslint-config-base": "0.0.8",
+    "@labkey/eslint-config-react": "0.0.8",
     "@storybook/addon-knobs": "6.1.15",
     "@storybook/react": "6.1.15",
     "@types/jest": "26.0.20",
@@ -38,6 +43,7 @@
     "copy-webpack-plugin": "6.0.3",
     "immutable": "3.8.2",
     "jest": "26.6.3",
+    "lint-staged": "10.5.4",
     "node-sass": "^5.0.0",
     "prettier": "2.2.1",
     "react": "16.13.1",

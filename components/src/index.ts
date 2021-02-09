@@ -11,8 +11,8 @@ import {
     CubeAxis,
     AxesMedataData,
     CubeMetadata,
-    CellSet
-} from "./types/LabKey"
+    CellSet,
+} from "./types/LabKey";
 
 import {
     Filter,
@@ -23,30 +23,22 @@ import {
     FilterCategories,
     FilterQuery,
     FilterCategory,
-    TotalCounts
-} from "./types/Filters"
+    TotalCounts,
+} from "./types/Filters";
 
 import {
     FilterSummary,
     FilterIndicatorList,
     FilterDeletor,
-    AssayFilterIndicatorList
-} from "./components/FilterSummary"
+    AssayFilterIndicatorList,
+} from "./components/FilterSummary";
 
-import {
-    HighlightedButton,
-    RowOfButtons
-} from "./components/Buttons"
+import { HighlightedButton, RowOfButtons } from "./components/Buttons";
 
-import {
-    SimpleDropdown,
-    DropdownButtons,
-    InnerDropdownButtons, 
-    OuterDropdownButton
-} from "./components/Dropdowns"
+import { SimpleDropdown, DropdownButtons, InnerDropdownButtons, OuterDropdownButton } from "./components/Dropdowns";
 
-import Greeter from './components/Greeter';
-import { Loader } from './components/Loader'
+import Greeter from "./components/Greeter";
+import { Loader } from "./components/Loader";
 
 export {
     LabKey,
@@ -62,16 +54,13 @@ export {
     AxesMedataData,
     CubeMetadata,
     CellSet,
-
     Filter,
     ISelectedFilter,
     ISelectedFilters,
     SelectedFilter,
     SelectedFilters,
     TotalCounts,
-
     Greeter,
-
     FilterSummary,
     FilterIndicatorList,
     FilterDeletor,
@@ -79,14 +68,11 @@ export {
     FilterCategories,
     FilterQuery,
     FilterCategory,
-
     HighlightedButton,
     RowOfButtons,
-
     SimpleDropdown,
     DropdownButtons,
-    InnerDropdownButtons, 
+    InnerDropdownButtons,
     OuterDropdownButton,
-
     Loader,
-}
+};

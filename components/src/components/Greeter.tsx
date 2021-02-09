@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-import "./Greeter.scss"
+import './Greeter.scss';
 
 interface GreeterProps {
-    name: string
+    name: string;
 }
 
-const Greeter: React.FC<GreeterProps> = ({name}) => <h1>Hello {name}</h1>;
+const Greeter: React.FC<GreeterProps> = ({ name }) => <h1>Hello {name}</h1>;
 
-export default Greeter
+export default Greeter;

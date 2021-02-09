@@ -1,0 +1,19 @@
+# exclude everything by default
+*.*
+
+# exclude these directories
+resources/web/gen
+src/java
+src/api-src
+test/
+webpack/
+
+# white-list files
+!*.js
+!*.jsx
+!*.ts
+!*.tsx
+
+# Exclude tests for now
+# TODO: update so tests can be linted
+*.test.*
