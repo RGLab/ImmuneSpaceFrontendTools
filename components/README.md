@@ -86,6 +86,7 @@ We use Typescript with React. If not specified here, refer to the [airbnb style 
     *  [https://pawelgrzybek.com/typescript-interface-vs-type/](https://pawelgrzybek.com/typescript-interface-vs-type/)
 * Use functional components and hooks.
     * [https://scotch.io/tutorials/getting-started-with-react-hooks](https://scotch.io/tutorials/getting-started-with-react-hooks)
+* Use scss for styles. Use `@use` instead of `@import` when importing variables. 
 
 ## Data Viz
 
