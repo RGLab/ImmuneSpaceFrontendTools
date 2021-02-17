@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Buttons.scss';
+const style = require('./Buttons.module');
 
 interface HighlightedButtonProps {
     action?: () => void;
@@ -26,7 +26,7 @@ export const HighlightedButton: React.FC<HighlightedButtonProps> = ({ href, acti
 // Floats all children in a nice little row
 export const RowOfButtons: React.FC<RowOfButtonProps> = ({ children, id }) => {
     return (
-        <div className="df-row-of-buttons" id={id}>
+        <div className={style["df-row-of-buttons"]} id={id}>
             {React.Children.map(children || null, (child, i) => {
                 return <div style={{ float: 'left', padding: '3px 10px' }}>{child}</div>;
             })}

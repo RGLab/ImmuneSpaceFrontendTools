@@ -1,11 +1,12 @@
-/*
- * https://github.com/LabKey/labkey-ui-components/blob/master/packages/components/webpack.config.js
- *
- * Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
- */
+
+const isDevelopment = process.env.NODE_ENV === 'development'
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+
+// https://developerhandbook.com/webpack/how-to-configure-scss-modules-for-webpack/
+// https://medium.com/@sapegin/css-modules-with-typescript-and-webpack-6b221ebe5f10
 module.exports = {
     entry: './src/index.ts',
     target: 'web',
@@ -13,30 +14,38 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.module\.scss$/,
                 use: [
-                    'css-loader'
-                ]
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    'style-loader', 
-                    'css-loader',
+                    isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
                     {
-                        loader: 'sass-loader',
+                        loader: 'css-loader',
                         options: {
-                            sourceMap: true
+                            modules: true,
+                            sourceMap: isDevelopment
+                        }
+                    },
+                    {
+                        loader: 'sass-loader', 
+                        options: {
+                            sourceMap: isDevelopment
                         }
                     }
                 ]
             },
-            // { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
-            // { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
-            // { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/octet-stream" },
-            // { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader" },
-            // { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" },
-            // { test: /\.png(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=image/png" },
+            {
+                test: /\.scss$/,
+                exclude: /\.module.(scss)$/,
+                use: [
+                    isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader, 
+                    'css-loader',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: isDevelopment
+                        }
+                    }
+                ]
+            },
             {
                 test: /\.tsx?$/,
                 loaders: [{
@@ -65,6 +74,10 @@ module.exports = {
         libraryTarget: 'umd'
     },
     plugins: [
+        new MiniCssExtractPlugin({
+            filename: isDevelopment ? '[name].css' : '[name].[hash].css',
+            chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css'
+        }),
         new CopyWebpackPlugin({
             patterns: [
                 {
