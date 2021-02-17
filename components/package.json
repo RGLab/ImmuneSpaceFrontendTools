@@ -1,6 +1,6 @@
 {
   "name": "@immunespace/components",
-  "version": "0.1.4-fb-cleanup-components.1",
+  "version": "0.1.5",
   "description": "shared React component library for ImmuneSpace",
   "main": "dist/components.js",
   "module": "dist/components.js",
