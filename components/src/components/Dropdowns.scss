@@ -1,5 +1,7 @@
+@use "~@immunespace/theme/dist/immunespace";
+
 // Top level dropdown
-.df-outer-dropdown {
+.immunespace-outer-dropdown {
   height: auto;
   width: min-content;
 
@@ -22,7 +24,7 @@
   }
 }
 
-.df-dropdown-option {
+.immunespace-dropdown-option {
   height: auto;
 
   & > a {
@@ -45,7 +47,7 @@
 
 
 // Nested dropdown (like in manageGroups)
-.df-sub-dropdown {
+.immunespace-sub-dropdown {
   width: 100%;
   font-size: inherit;
   font-style: inherit;
@@ -78,7 +80,7 @@
       &:hover {
         color: #f7f7f7;
         text-decoration: none;
-        background-color: #3495d2; // This is the color on prod. It will look weird on test/local where colors are different
+        background-color: immunespace.$secondary; 
       }
 
     }

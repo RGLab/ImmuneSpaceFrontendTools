@@ -1,5 +1,6 @@
+@use "~@immunespace/theme/dist/immunespace";
 
-.filterbar {
+.immunespace-filterbar {
     // border: 1px solid #aaaaaa;
     // margin-left: 0;
     // margin-right: 0;
@@ -10,7 +11,7 @@
   }
 
 
-.filter-indicator {
+.immunespace-filter-indicator {
     width: auto;
     float: left;
     border-radius: 1em;
@@ -23,17 +24,17 @@
     margin-left: 15px;
   
     &.Study {
-      background: #54278f;
+      background: immunespace.$study-color;
       color: white;
     }
   
     &.Subject {
-      background: #6baed6;
+      background: immunespace.$pariticipant-color;
       color: white;
     }
   
     &.Data {
-      background: #238b45;
+      background: immunespace.$sample-color;
       color: white;
     }
 
@@ -47,8 +48,8 @@
   
   }
   
-  .filter-deletor {
-    @extend .filter-indicator;
+  .immunespace-filter-deletor {
+    @extend .immunespace-filter-indicator;
     width: max-content;
     max-width: 15em;
     border: 2px solid #f7f7f7;

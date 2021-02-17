@@ -1,3 +1,4 @@
+@use "sass:color";
 // ImmuneSpace colors
 
 // Main theme colors
@@ -15,6 +16,7 @@ $primary: $immune-blue;
 $secondary: $pale-blue;
 $background: $dark-gray;
 
+
 // Secondary colors
 $blue:  #0074E9;
 $bright-green: #20ED8A;
@@ -31,3 +33,9 @@ $pistachio:  #78C646;
 $soft-yellow:  #F4E04E;
 $amber: #D15400;
 $dusty-rose: #CC5874;
+
+// Data Finder colors
+$pariticipant-color:  $periwinkle; 
+$study-color: $pistachio; 
+$sample-color: $amber; 
+$sample-color-light: color.adjust($sample-color, $lightness: 20%)

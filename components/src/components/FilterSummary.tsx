@@ -33,7 +33,7 @@ export const FilterSummary = (props: FilterSummaryProps) => {
     // if (props.filters.subject.size != 0) debugger;
 
     return (
-        <div className="row filterbar">
+        <div className="row immunespace-filterbar">
             <div className="col-sm-4">
                 <FilterIndicatorList
                     filterClass="Study"
@@ -74,7 +74,7 @@ export const AssayFilterIndicatorList: React.FC<AssayFilterIndicatorListProps> =
             filters.getIn(['Timepoint', 'SampleType']) === undefined)
     ) {
         if (indicateNoFilters) {
-            filterFlags = <em className="filter-indicator no-filters">No filters currently applied</em>;
+            filterFlags = <em className="immunespace-filter-indicator no-filters">No filters currently applied</em>;
         } else {
             filterFlags = <></>;
         }
@@ -164,7 +164,7 @@ export const FilterIndicatorList: React.FC<FilterIndicatorListProps> = ({
     // debugger;
     if (filters.size === 0) {
         if (indicateNoFilters) {
-            filterFlags = <em className="filter-indicator no-filters">No filters currently applied</em>;
+            filterFlags = <em className="immunespace-filter-indicator no-filters">No filters currently applied</em>;
         } else {
             filterFlags = <></>;
         }
@@ -197,7 +197,7 @@ interface FilterDeletorProps {
     onDelete: () => void;
 }
 export const Flag: React.FC<FlagProps> = ({ dim, children }) => {
-    return <div className={'filter-indicator ' + dim}>{children}</div>;
+    return <div className={'immunespace-filter-indicator ' + dim}>{children}</div>;
 };
 const FilterIndicatorFlag: React.FC<FilterIndicatorFlagProps> = ({ dim, filter, level }) => {
     const text = filter.members.join(' ' + filter.operator + ' ');
@@ -212,7 +212,7 @@ const FilterIndicatorFlag: React.FC<FilterIndicatorFlagProps> = ({ dim, filter, 
 
 export const FilterDeletor: React.FC<FilterDeletorProps> = ({ dim, onDelete, children }) => {
     return (
-        <div className={'filter-deletor ' + dim} onClick={onDelete}>
+        <div className={'immunespace-filter-deletor ' + dim} onClick={onDelete}>
             <span>{children}</span>
             <i className="fa fa-times"></i>
         </div>

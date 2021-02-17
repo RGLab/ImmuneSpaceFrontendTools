@@ -31,7 +31,7 @@ interface OuterDropdownButtonProps {
 // This essentially just creates a bootstrap button dropdown
 export const SimpleDropdown: React.FC<DropdownButtonProps> = ({ title, buttonData, disabled, id }) => {
     return (
-        <div className="dropdown df-outer-dropdown" id={id}>
+        <div className="dropdown immunespace-outer-dropdown" id={id}>
             <div className="btn" role="group">
                 <button
                     className="btn btn-default dropdown-toggle"
@@ -44,10 +44,10 @@ export const SimpleDropdown: React.FC<DropdownButtonProps> = ({ title, buttonDat
                         <i className="fa fa-caret-down"></i>
                     </span>
                 </button>
-                <ul className="dropdown-menu df-dropdown">
+                <ul className="dropdown-menu immunespace-dropdown">
                     {buttonData?.map(button => {
                         return (
-                            <li key={button.label} className="df-dropdown-option">
+                            <li key={button.label} className="immunespace-dropdown-option">
                                 <a style={{ padding: '0px 5px' }} onClick={button.action} href={button.href}>
                                     {button.label}
                                 </a>
@@ -74,7 +74,7 @@ export const OuterDropdownButton: React.FC<OuterDropdownButtonProps> = ({ childr
     const open = () => {
         const cl = openRef.current.classList;
         const willOpen = !cl.contains('open');
-        for (const el of document.querySelectorAll('.df-outer-dropdown>.open')) {
+        for (const el of document.querySelectorAll('.immunespace-outer-dropdown>.open')) {
             el.classList.remove('open');
         }
         if (willOpen) {
@@ -83,7 +83,7 @@ export const OuterDropdownButton: React.FC<OuterDropdownButtonProps> = ({ childr
     };
 
     return (
-        <div className="dropdown df-outer-dropdown" id={id}>
+        <div className="dropdown immunespace-outer-dropdown" id={id}>
             <div className="btn" ref={openRef} role="group">
                 <button className="btn btn-default dropdown-toggle" type="button" disabled={disabled} onClick={open}>
                     <span>{title}</span>
@@ -100,7 +100,7 @@ export const OuterDropdownButton: React.FC<OuterDropdownButtonProps> = ({ childr
 export const InnerDropdownButtons: React.FC<DropdownButtonProps> = ({ title, buttonData }) => {
     const [open, setOpen] = React.useState(false);
     return (
-        <div className="dropdown df-sub-dropdown">
+        <div className="dropdown immunespace-sub-dropdown">
             <div className={open ? ' open' : ''} role="group">
                 <button
                     type="button"
@@ -121,10 +121,13 @@ export const InnerDropdownButtons: React.FC<DropdownButtonProps> = ({ title, but
 
 const DropdownContent: React.FC<DropdownContentProps> = ({ buttonData }) => {
     return (
-        <ul className="dropdown-menu df-dropdown">
+        <ul className="dropdown-menu immunespace-dropdown">
             {buttonData.map(button => {
                 return (
-                    <li key={button.label} className={'df-dropdown-option ' + (button.disabled ? 'disabled' : '')}>
+                    <li
+                        key={button.label}
+                        className={'immunespace-dropdown-option ' + (button.disabled ? 'disabled' : '')}
+                    >
                         {(() => {
                             if (button.buttonData) {
                                 return <InnerDropdownButtons title={button.label} buttonData={button.buttonData} />;
@@ -148,10 +151,13 @@ const DropdownContent: React.FC<DropdownContentProps> = ({ buttonData }) => {
 
 const InnerDropdownContent: React.FC<DropdownContentProps> = ({ buttonData, open }) => {
     return (
-        <ul className="dropdown-menu df-dropdown" style={open ? { display: 'contents' } : {}}>
+        <ul className="dropdown-menu immunespace-dropdown" style={open ? { display: 'contents' } : {}}>
             {buttonData.map(button => {
                 return (
-                    <li key={button.label} className={'df-dropdown-option ' + (button.disabled ? 'disabled' : '')}>
+                    <li
+                        key={button.label}
+                        className={'immunespace-dropdown-option ' + (button.disabled ? 'disabled' : '')}
+                    >
                         {(() => {
                             if (button.buttonData) {
                                 return <InnerDropdownButtons title={button.label} buttonData={button.buttonData} />;
