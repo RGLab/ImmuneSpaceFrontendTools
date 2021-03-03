@@ -31,4 +31,5 @@ jobs:
         working-directory: ${{env.working-directory}}
       - name: testing
         run: npm test components
+        working-directory: ${{env.working-directory}}
         
