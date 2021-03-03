@@ -12,6 +12,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./components
 
     strategy:
       matrix:
@@ -23,5 +25,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci components
-      - run: npm test components
+        
+      - name: Installing dependencies
+        run: npm ci
+        working-directory: ${{env.working-directory}}
+      - name: testing
+        run: npm test components
+        
