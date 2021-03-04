@@ -6,6 +6,7 @@ import { configure, mount } from "enzyme";
 import * as buttons from "./Buttons";
 
 // https://stackoverflow.com/questions/50222545/enzyme-expects-an-adapter-to-be-configured
+
 configure({ adapter: new Adapter() });
 
 describe("<HighlightedButton />", () => {
