@@ -18,10 +18,6 @@ describe("<HighlightedButton />", () => {
     test("change text", () => {
         const button = mount(<buttons.HighlightedButton action={jest.fn()}>{"Before"}</buttons.HighlightedButton>);
         expect(button.text()).toEqual("Before");
-
-        // Yeah this isn't really testing the button correctly so it's commented out
-        // button.setProps({ label: "After" });
-        // expect(button.text()).toEqual("After");
     });
     test("id", () => {
         const button = mount(
