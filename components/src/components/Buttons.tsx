@@ -6,7 +6,6 @@ interface HighlightedButtonProps {
     href?: string;
     id?: string;
     disabled?: boolean;
-    label?: string;
 }
 
 interface RowOfButtonProps {
