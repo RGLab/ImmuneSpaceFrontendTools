@@ -1,9 +1,11 @@
 import React from "react";
 import * as renderer from "react-test-renderer";
+import Adapter from "enzyme-adapter-react-16";
 
-import { mount } from "enzyme";
+import { configure, mount } from "enzyme";
 
 import * as dropdowns from "./Dropdowns";
+configure({ adapter: new Adapter() });
 
 describe("<InnerDropdownButtons />", () => {
     const buttonData = [
