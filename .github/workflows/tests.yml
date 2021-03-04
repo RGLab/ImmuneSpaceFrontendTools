@@ -13,7 +13,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      working-directory: ./components
+      components-directory: ./components
+      theme-directory: ./theme
 
     strategy:
       matrix:
@@ -26,10 +27,16 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
         
-      - name: Installing dependencies
+      - name: Installing components dependencies
         run: npm ci
-        working-directory: ${{env.working-directory}}
-      - name: testing
-        run: npm test components
-        working-directory: ${{env.working-directory}}
+        working-directory: ${{env.components-directory}}
+      - name: Testing components
+        run: npm test
+        working-directory: ${{env.components-directory}}
+      - name: Installing theme dependencies
+        run: npm ci
+        working-directory: ${{env.theme-directory}}
+      - name: Testing theme
+        run: npm test
+        working-directory: ${{env.theme-directory}}
         
