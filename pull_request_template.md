@@ -20,13 +20,13 @@ makes any changes to UI functionality, there should be a related UITesting PR. -
 ## PR Checklist for reviewer
 
 General (all modules):
-[] Build it on your own local instance and test new features or changes.
-[] Pass UITesting on local and the matching UITesting branch. 
-[] All jest tests are passing
-[] Is it functional and meets the requirements? 
-[] Are any shorthand variable or function names included in the  [Glossary](https://www.notion.so/rglab/Glossary-of-variable-abbreviations-e205838b1f534abc903fa8c2228a6d7f)? 
-[] Does it include descriptive code comments? 
-[] Does it follow the [Style Guide](https://github.com/RGLab/ImmuneSpaceFrontendTools/tree/main/components#style-guide)? 
+- [] Build it on your own local instance and test new features or changes.
+-[] Pass UITesting on local and the matching UITesting branch. 
+-[] All jest tests are passing
+-[] Is it functional and meets the requirements? 
+-[] Are any shorthand variable or function names included in the  [Glossary](https://www.notion.so/rglab/Glossary-of-variable-abbreviations-e205838b1f534abc903fa8c2228a6d7f)? 
+-[] Does it include descriptive code comments? 
+-[] Does it follow the [Style Guide](https://github.com/RGLab/ImmuneSpaceFrontendTools/tree/main/components#style-guide)? 
     [] No eslint warnings
 [] Does it have any new dependencies? Is it justifiable? 
 [] Is there code duplication that could be reduced? 
