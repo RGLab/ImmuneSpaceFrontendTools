@@ -28,7 +28,7 @@ describe("<HighlightedButton />", () => {
                 {"Before"}
             </buttons.HighlightedButton>,
         );
-        expect(button.text()).toEqual("Before");
+        expect(button.text()).toEqual("Beforsdfsdfe");
 
         // Yeah this isn't really testing the button correctly so it's commented out
         // button.setProps({ label: "After" });
