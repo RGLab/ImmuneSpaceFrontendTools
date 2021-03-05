@@ -2,6 +2,10 @@
 
 ImmuneSpace theme and styles shared between React modules. 
 
+![version](https://img.shields.io/badge/dynamic/json?color=blue&label=version&prefix=v&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRGLab%2FImmuneSpaceFrontendTools%2Ffb_add_repo_badges%2Ftheme%2Fpackage.json)
+
+![npm](https://img.shields.io/npm/dt/@immunespace/theme)
+
 1. Creates `core.css` which can be loaded into ImmuneSpace via the UI. 
 2. Defines variables, functions, and mixins which can be used in immunespace 
 to enable consistent styling. 
