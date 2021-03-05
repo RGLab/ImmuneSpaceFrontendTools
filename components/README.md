@@ -2,6 +2,13 @@
 
 Defines React components shared between ImmuneSpace modules. 
 
+
+![version](https://img.shields.io/badge/dynamic/json?color=blue&label=version&prefix=v&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRGLab%2FImmuneSpaceFrontendTools%2Ffb_add_repo_badges%2Fcomponents%2Fpackage.json)
+
+![code coverage](https://img.shields.io/badge/dynamic/json?color=green&label=coverage&query=total.lines.pct&suffix=%25&url=https%3A%2F%2Fraw.githubusercontent.com%2FRGLab%2FImmuneSpaceFrontendTools%2Ffb_add_repo_badges%2Fcomponents%2Fcoverage%2Fcoverage-summary.json)
+
+![npm](https://img.shields.io/npm/dt/@immunespace/components)
+
 ## Installation
 `npm install --save @immunespace/components`
 
