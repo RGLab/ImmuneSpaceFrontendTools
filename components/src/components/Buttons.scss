@@ -1,4 +1,3 @@
-
 @use "~@immunespace/theme/dist/immunespace";
 
 .df-highlighted-button {
@@ -8,15 +7,15 @@
     color: white;
     padding-top: 0;
     height: 20px;
-    
-    &:hover {
-      border: 1px solid immunespace.$highlight-primary;
-      color: white;
-    }
-  }
 
+    &:hover {
+        border: 1px solid immunespace.$highlight-primary;
+        color: white;
+        cursor: pointer;
+    }
+}
 
 .df-row-of-buttons {
     display: inline-block;
-    width: 100%
-  }
+    width: 100%;
+}
