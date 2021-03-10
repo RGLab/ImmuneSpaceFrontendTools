@@ -1,14 +1,14 @@
 import React, { FunctionComponent } from "react";
 import "./DummyComponent.css";
 
-interface DummyProps {
-    action?: () => void;
+export interface DummyProps {
+    onClick?: () => void;
     disabled?: boolean;
 }
 
-const DummyComponent: FunctionComponent<DummyProps> = ({ children, action, ...rest }) => {
+const DummyComponent: FunctionComponent<DummyProps> = ({ children, ...rest }) => {
     return (
-        <button id="dummy" onClick={action} {...rest}>
+        <button id="dummy" {...rest}>
             {children}
         </button>
     );
