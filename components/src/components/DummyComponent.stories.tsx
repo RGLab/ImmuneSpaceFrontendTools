@@ -1,14 +1,14 @@
 import React from "react";
 import DummyComponent, { DummyProps } from "./DummyComponent";
-import { action } from "@storybook/addon-actions";
+import { Story, Meta } from "@storybook/react";
 
 export default {
     title: "DummyComponent",
     component: DummyComponent,
     parameters: { actions: { argTypesRegex: "^on.*" } },
-};
+} as Meta;
 
-const Template = (args: DummyProps) => <DummyComponent {...args} />;
+const Template: Story<DummyProps> = (args: DummyProps) => <DummyComponent {...args} />;
 
 export const DummyPrime = Template.bind({});
 DummyPrime.args = {
