@@ -4,9 +4,12 @@ import { Story, Meta } from "@storybook/react";
 import {
     ButtonData,
     DropdownButtonProps,
-    DropdownContentProps,
+    OuterDropdownButton,
     OuterDropdownButtonProps,
     SimpleDropdown,
+    DropdownContent,
+    DropdownButtons,
+    InnerDropdownButtons,
 } from "./Dropdowns";
 
 export default {
@@ -14,20 +17,46 @@ export default {
     component: SimpleDropdown,
 } as Meta;
 
-const SimpleTemplate: Story<DropdownButtonProps> = (args) => <SimpleDropdown {...args} />;
-export const Primary = SimpleTemplate.bind({});
-
+// mock data used to populate dropdown options
 const btnData: ButtonData = {
-    label: "data",
-    icon: <div>Hello</div>,
+    label: "Button Option",
+    icon: <div className="btn">Icon</div>,
     action: () => {},
     disabled: false,
     href: "#",
 };
 
-Primary.args = {
+// This button actually doesn't dropdown due to css ....?
+const SimpleDropdownTemplate: Story<DropdownButtonProps> = (args) => <SimpleDropdown {...args} />;
+export const SimpleDropdownBasic = SimpleDropdownTemplate.bind({});
+SimpleDropdownBasic.args = {
     title: "Drop Down",
     buttonData: [btnData, btnData],
     disabled: false,
     id: "12345",
+};
+
+// The OuterDropdownButton and DropdownButtons seems to be the same thing?
+const OuterDropdownTemplate: Story<OuterDropdownButtonProps> = (args) => <OuterDropdownButton {...args} />;
+export const OuterDropdownBasic = OuterDropdownTemplate.bind({});
+OuterDropdownBasic.args = {
+    disabled: false,
+    title: "Dropdown",
+    id: "12345",
+    children: <DropdownContent buttonData={[btnData]} />,
+};
+
+const DropdownButtonsTemplate: Story<DropdownButtonProps> = (args) => <DropdownButtons {...args} />;
+export const DropdownButtonsBasic = DropdownButtonsTemplate.bind({});
+DropdownButtonsBasic.args = {
+    title: "Dropdown",
+    buttonData: [btnData],
+    disabled: false,
+    id: "11111",
+};
+
+const InnerDropdownTemplate: Story<DropdownButtonProps> = (args) => <InnerDropdownButtons {...args} />;
+export const InnerDropdownBasic = InnerDropdownTemplate.bind({});
+InnerDropdownBasic.args = {
+    ...DropdownButtonsBasic.args,
 };

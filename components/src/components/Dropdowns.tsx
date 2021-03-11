@@ -78,6 +78,7 @@ export const OuterDropdownButton: React.FC<OuterDropdownButtonProps> = ({ childr
             el.classList.remove("open");
         }
         if (willOpen) {
+            console.log("open");
             cl.add("open");
         }
     };
@@ -119,7 +120,7 @@ export const InnerDropdownButtons: React.FC<DropdownButtonProps> = ({ title, but
     );
 };
 
-const DropdownContent: React.FC<DropdownContentProps> = ({ buttonData }) => {
+export const DropdownContent: React.FC<DropdownContentProps> = ({ buttonData }) => {
     return (
         <ul className="dropdown-menu df-dropdown">
             {buttonData.map((button) => {
