@@ -12,7 +12,7 @@ import {
 export default {
     title: "Dropdowns",
     component: SimpleDropdown,
-};
+} as Meta;
 
 const SimpleTemplate: Story<DropdownButtonProps> = (args) => <SimpleDropdown {...args} />;
 export const Primary = SimpleTemplate.bind({});
