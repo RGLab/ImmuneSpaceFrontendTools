@@ -1,7 +1,7 @@
-import React from 'react';
-import './Loader.scss';
+import React from "react";
+import "./Loader.scss";
 
-interface LoaderProps {
+export interface LoaderProps {
     id?: string;
 }
 
