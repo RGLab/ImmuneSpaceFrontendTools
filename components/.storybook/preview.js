@@ -33,4 +33,21 @@ export const parameters = {
             ...customViewports,
         },
     },
+    backgrounds: {
+        default: "white",
+        values: [
+            {
+                name: "white",
+                value: "#FFFFFF",
+            },
+            {
+                name: "twitter",
+                value: "#00aced",
+            },
+            {
+                name: "facebook",
+                value: "#3b5998",
+            },
+        ],
+    },
 };
