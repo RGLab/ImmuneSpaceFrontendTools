@@ -1,4 +1,5 @@
 import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
+const DEVICE_HEIGHT = "700px";
 
 const customViewports = {
     kindleFire2: {
@@ -16,11 +17,51 @@ const customViewports = {
         },
     },
 
-    bigScreen: {
-        name: "Very Large Devices",
+    vSmall: {
+        name: "Very Small Devices, Small Phones",
+        styles: {
+            width: "320px",
+            height: DEVICE_HEIGHT,
+        },
+    },
+
+    small: {
+        name: "Small Devices, Medium-Large Phones",
+        styles: {
+            width: "480px",
+            height: DEVICE_HEIGHT,
+        },
+    },
+
+    medium: {
+        name: "Medium Devices, Tablets",
+        styles: {
+            width: "768px",
+            height: DEVICE_HEIGHT,
+        },
+    },
+
+    medLarge: {
+        name: "Medium-Large Devices, Small Laptops & Large Tablets",
+        styles: {
+            width: "1024px",
+            height: DEVICE_HEIGHT,
+        },
+    },
+
+    large: {
+        name: "Large Devices, Large Laptops & Normal Desktops",
+        styles: {
+            width: "1440px",
+            height: DEVICE_HEIGHT,
+        },
+    },
+
+    vLarge: {
+        name: "Very Large Devices, Large Desktops",
         styles: {
             width: "2560px",
-            height: "1440px",
+            height: DEVICE_HEIGHT,
         },
     },
 };
