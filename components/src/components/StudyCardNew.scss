@@ -1,0 +1,67 @@
+.study-pi {
+    float: right;
+}
+
+.study-properties-new {
+    //display: flex;
+    //justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.study-properties-new > span {
+    //display: inline;
+    font-size: 0.9em;
+}
+
+.study-property-label {
+    display: inline-block;
+    max-width: 50%;
+    margin-right: 0.5rem;
+}
+
+.study-subtitle {
+    font-size: 0.85rem;
+    color: #626262;
+}
+
+.study-meta-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.study-property-wrapper {
+    display: inline-block;
+    //background-color: pink;
+    border-radius: 5px;
+    margin: 0 2px;
+    padding: 0 5px;
+    font-size: 0.75rem;
+}
+
+.study-properties-values {
+    display: inline-block;
+}
+
+.participant-details {
+    display: flex;
+    align-items: center;
+}
+
+.participant-count {
+    height: 100%;
+}
+
+.participant-icon,
+.institution-icon {
+    color: #0f91f2;
+    margin-right: 5px;
+}
+
+.institution-meta-container {
+    margin-top: 0.5rem;
+}
+
+.institution-icon {
+    margin-bottom: 5px;
+}
