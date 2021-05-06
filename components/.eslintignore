@@ -17,3 +17,4 @@ webpack/
 # Exclude tests for now
 # TODO: update so tests can be linted
 *.test.*
+*.stories.*

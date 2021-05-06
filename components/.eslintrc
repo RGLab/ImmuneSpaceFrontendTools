@@ -1,3 +1,13 @@
 {
-    "extends": "@labkey/eslint-config-react"
+    "extends": ["@labkey/eslint-config-react"],
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "usePrettierrc": true
+            }
+        ],
+        "jsx-quotes": ["error", "prefer-double"],
+        "quotes": ["error", "double"]
+    }
 }
