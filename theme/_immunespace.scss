@@ -1,3 +1,4 @@
+@use "sass:color";
 // ImmuneSpace colors
 
 // Main theme colors
@@ -7,9 +8,10 @@ $bright-orange: #ff5b00;
 $white: #FFFFFF;
 $light-gray: #b4bbbf;
 $dark-gray: #1a1a1a;
+$dark-blue: #065c9c;
 
 // Main theme colors
-$highlight-primary: #255c97; // dark blue
+$highlight-primary: $dark-blue; // dark blue
 $highlight-secondary: $bright-orange;
 $primary: $immune-blue;
 $secondary: $pale-blue;
@@ -31,3 +33,46 @@ $pistachio:  #78C646;
 $soft-yellow:  #F4E04E;
 $amber: #D15400;
 $dusty-rose: #CC5874;
+
+
+// Other colors
+$black: #000000;
+$green: #71b300;
+$green-hover: #4c9d45;
+$gray: #344251;
+$light-gray2: #d9e0e2;
+
+
+/* TYPOGRAPHY */
+$muli: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$nunito-sans: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif: "Didot 06 A", "Didot 06 B", "Georgia" Cambria, Times New Roman, Times,
+  serif;
+$serif2: "Didot 06 A", "Didot 06 B", "Georgia", Cambria, Times New Roman, Times,
+  serif;
+$sans-serif: $nunito-sans;
+
+/* TEXT SIZES */
+$size-1: 3rem;
+$size-2: 2.5rem;
+$size-3: 2rem;
+$size-4: 1.5rem;
+$size-5: 1.25rem;
+$size-6: 1rem;
+$size-7: 0.75rem;
+
+/* FONT WEIGHTS */
+$font-weight--light: 300;
+$font-weight--normal: 400;
+$font-weight--medium: 500;
+$font-weight--semibold: 600;
+$font-weight--black: 700;
+$font-weight--bold: 800;
+$font-weight--extrabold: 900;
+
+
+// Data Finder colors
+$pariticipant-color:  $periwinkle; 
+$study-color: $pistachio; 
+$sample-color: $amber; 
+$sample-color-light: color.adjust($sample-color, $lightness: 20%)
