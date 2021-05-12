@@ -28,6 +28,11 @@ To make changes:
 1. Submit PRs to the `dev` branch for this package, LabKeyModules, UITesting, and any other related packages and request a review. 
 1. Merge PRs into `dev` branch. Update version number to a patch version (instead of beta version) and publish with `dev` tag. Remove the tag from npm via `npm dist-tag rm @immunespace/components fb_newcomponent`. 
 1. Submit `dev` -> `master` PRs. `dev` -> `master` PRs must pass all tests and go through code reveiw. 
+2. Swap out the `dev` tag for the `latest` tag in the final version.
+    ```
+    npm dist-tag rm @immunespace/components dev
+    npm dist-tag add @immunespace/components@<latest version> latest
+    ```
 
 ## Developing React-based modules for ImmuneSpace
 Refer to [LabKey's documentation](https://www.labkey.org/Documentation/wiki-page.view?name=reactJSdev) for more docs on developing React modules. 
