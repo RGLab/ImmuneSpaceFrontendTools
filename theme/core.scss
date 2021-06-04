@@ -2,7 +2,7 @@
 
 // Hack to hide product menu in header
 #headerProductDropdown{
-    visibility: hidden;
+    display: none;
 }
 
 /* The following adapts the seattle.css theme to work with HIPC colors. The main colors are overridden; 
